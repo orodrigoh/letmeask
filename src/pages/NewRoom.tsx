@@ -28,7 +28,7 @@ export const NewRoom = () => {
       authorId: user?.id,
     });
     //Enviando usuário para sala criada
-    history.push(`/rooms/${firebaseRoom.key}`)
+    history.push(`/admin/rooms/${firebaseRoom.key}`)
   }
 
   return (

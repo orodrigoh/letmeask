@@ -1,8 +1,13 @@
 #page-auth {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   align-items: stretch;
   height: 100vh;
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
 
+  }
 
 aside {
   flex: 7;
@@ -32,6 +37,15 @@ aside {
     margin-top: 16px;
     color: #f8f8f8;
   }
+
+  @media (max-width: 720px) {
+    max-height: 320px;
+    align-items: center;
+    padding: 40px 32px;
+    img {
+      display: none;
+    }
+  }
 }
 
   main {
@@ -42,6 +56,11 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 720px) {
+      padding: 32px 32px;
+  
+    }
   }
 
   .main-content {
